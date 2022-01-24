@@ -1,6 +1,3 @@
-<?php
-	include 'libs/db.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,18 +47,31 @@
 			</div>	 
 	</header>
 	<section2>
-			<div class = "block2">
+			<div class = "block2katalog">
 				<div id="kat" class = "verh">
 				</div>
 				<div class ="container">
 					<div  class="titles_4">
 					Каталог
-					</div>
-					<div class="flower">
-					</div>
 				</div>
-				<div id="dost" class = "niz">
+				 <?php 
+					$db_host='localhost';
+					$db_name='flowers';
+					$db_user='root';
+					$db_pass='root';
+					mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+					$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+					$mysqli->set_charset("utf8mb4");
+					$result = $mysqli->query('SELECT * FROM `products`'); 
+
+					while($row = $result->fetch_assoc())
+					{
+					    echo "<a class='contentblock' ><img class='contentphoto'src='" . $row['photo'] . "' alt='' />";
+						echo '<p align="left" class="contenttext">' . $row['name'] . '<br>' . $row['price'] . '<br>' . '<p align="left" class="contenttext2">' . $row['description'] .'</p></a>';
+					}
+				?>
 				</div>
+				<div id="dost" class = "niz"></div>
 				</div>
 			</div>
 	</section2>

@@ -1,7 +1,5 @@
 <?php 
-	
 	include 'libs/db.php';
-
 ?>
 <!DOCTYPE html>
 <html>

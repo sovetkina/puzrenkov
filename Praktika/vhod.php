@@ -1,9 +1,9 @@
 <?php 
-	include 'libs/db.php';
-
-	if (isset($_POST['vhod'])) {
+	require 'libs/db.php';
+	session_start();
+	if(isset($_POST['vhod'])) {
 		$login = R::findOne('users', 'login = ?', [$_POST['login']]);
-		if($login){
+		if($login) {
 			if($login->password == $_POST['password']) {
 				$_SESSION['user'] = $login;
 				header('Location: index.php');

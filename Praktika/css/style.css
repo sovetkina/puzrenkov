@@ -35,7 +35,7 @@ div{
 
 nav{
 	float:right;
-	margin-top: 23px;
+	margin-top: 36px;
 }
 
 .menu{
@@ -352,6 +352,7 @@ button {
 	text-decoration: none;
 	color: #fff;
 }
+
 .nazv{
 	position: absolute;
 	color:#fff;
@@ -364,4 +365,37 @@ button {
 
 .sitemap ul{
 	margin-left: 23px;
+}
+
+.contentblock {
+	display: flex;
+	flex-direction: row;
+	background: #fff;
+	margin-bottom: 20px;
+	border-radius: 18px;
+}
+
+.contentphoto{
+	height:400px;
+	width:400;
+	margin: 8px;
+}
+
+.contenttext{
+	color: #000;
+	font-size: 20px;
+	font-family: Montserrat;
+	margin-right: 50px;
+}
+
+.contenttext2{
+	color: #000;
+	font-size: 20px;
+	font-family: Montserrat;
+}
+
+.block2katalog{
+    background: #2D3336;
+    height: 2570.4px;
+    margin-top: 5px;
 }
